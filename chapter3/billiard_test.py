@@ -88,7 +88,7 @@ def updatePositon(obj, dt = 0.05):
 def getSpecialPoint(obj):
     global x, y, sign
     if sign == 0 and obj.pos.y > 0 or sign == 1 and obj.pos.y < 0:
-        x.append(pre_x - (obj.pos.x-pre_x) * pre_y/obj.pos.y)
+        x.append(pre_x - (obj.pos.x-pre_x) * pre_y/(obj.pos.y-pre_y))
         y.append(obj.velocity.x)
         sign = not sign
 
